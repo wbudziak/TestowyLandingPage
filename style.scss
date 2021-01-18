@@ -1,0 +1,169 @@
+@import 'variables';
+
+html{
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 200vh;
+    .header{
+        position: relative;
+        margin-top: 32px;
+        background-color: white;
+        height: 86px;
+        display: flex;
+        .logo-container{
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            img{
+                margin-top: 10px;
+                max-width: 196px;
+                width: 100%;
+            }
+        }
+        .menu-container{
+            flex: 1;
+            display: flex;
+            // align-items: center;
+            margin-top: 16px;
+            justify-content: center;
+            ol{
+               max-width: 361px;
+               width: 100%;
+               display: flex;
+               justify-content: space-between;
+               li{
+                   font-weight: 500;
+                   font-size: 1em;
+                   line-height: 1em;
+                   color: $dark-blue;
+               }
+            }
+        }
+        .buttons-container{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            .buttons{
+                max-width: 256px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .buttons-container_button{
+                    max-width: 119px;
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 8px;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    border: 2px solid $dark-blue;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 18.75px;
+                }
+                .buttons-container_button--modifier{
+                    border: none;
+                    background-color: $dark-blue;
+                    color: white;
+                }
+            }
+        }
+        span{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: #EFEEF3;
+        }
+    }
+    .banner{
+        padding-top: 54px;
+        padding-bottom: 120px;
+        position: relative;
+        .banner_content{
+            max-width: 477px;
+            width: 100%;
+            h1{
+                font-size: 3.5rem;
+                line-height: 68px;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight: 600;
+            }
+            p{
+                margin-top: 20px;
+                font-size: 1.19rem;
+                font-weight: 400;
+                line-height: 36px;
+            }
+            .buttons-container{
+                margin-top: 31px;
+                max-width: 378px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                &_button{
+                    max-width: 178px;
+                    width: 100%;
+                    height: 48px;
+                    border: none;
+                    outline: none;
+                    background-color: $light-blue;
+                    color: white;
+                    font-size: 1rem;
+                    line-height: 18.75px;
+                    border-radius: 8px;
+                }
+                &_button--modify{
+                    background-color: #fff;
+                    color: $light-blue;
+                    border: 2px $light-blue solid;
+                }
+            }
+        }
+        .banner_photo{
+            display: flex;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .arrow {
+                display: block;
+                position: absolute;
+                height: 55px;
+                width: 55px;
+                border-radius: 5px;
+                background-color: $dark-blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    max-width: 22px;
+                    width: 100%;
+                    height: 22px;
+                }
+            }
+            .left-arrow{
+                top: 50%;
+                left: 0;
+                transform: translate(-50%,-50%);
+            }
+            .right-arrow{
+                top: 50%;
+                right: 0;
+                transform: translate(50%,-50%);
+            }
+        }
+    }
+}
