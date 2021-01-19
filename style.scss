@@ -21,7 +21,7 @@ body{
             align-items: flex-start;
             justify-content: left;
             img{
-                margin-top: 10px;
+                margin-top: 5px;
                 max-width: 196px;
                 width: 100%;
             }
@@ -29,7 +29,6 @@ body{
         .menu-container{
             flex: 1;
             display: flex;
-            // align-items: center;
             margin-top: 16px;
             justify-content: center;
             ol{
@@ -131,37 +130,43 @@ body{
                 }
             }
         }
-        .banner_photo{
+        .photo-container{
             display: flex;
-            position: relative;
-            img{
-                width: 100%;
-            }
-            .arrow {
-                display: block;
-                position: absolute;
-                height: 55px;
-                width: 55px;
-                border-radius: 5px;
-                background-color: $dark-blue;
+            justify-content: flex-end;
+            .photo-container_photo{
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                position: relative;
+                max-width: 576px;
+                height: 416px;
                 img{
-                    max-width: 22px;
                     width: 100%;
-                    height: 22px;
                 }
-            }
-            .left-arrow{
-                top: 50%;
-                left: 0;
-                transform: translate(-50%,-50%);
-            }
-            .right-arrow{
-                top: 50%;
-                right: 0;
-                transform: translate(50%,-50%);
+                .arrow {
+                    display: block;
+                    position: absolute;
+                    height: 55px;
+                    width: 55px;
+                    border-radius: 5px;
+                    background-color: $dark-blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        max-width: 22px;
+                        width: 100%;
+                        height: 22px;
+                    }
+                }
+                .left-arrow{
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-50%,-50%);
+                }
+                .right-arrow{
+                    top: 50%;
+                    right: 0;
+                    transform: translate(50%,-50%);
+                }
             }
         }
     }
@@ -322,7 +327,7 @@ body{
     }
     .chose-plan{
         &_text{
-            padding-top: 201px;
+            padding-top: 198px;
             h1{
                 font-size: 2.5rem;
                 font-family: 'Nunito Sans', sans-serif;
@@ -352,8 +357,9 @@ body{
                 -moz-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                 box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                 h2{
-                    margin-top: 50px;
-                    max-width: 137px;
+                    text-align: center;
+                    margin-top: 49px;
+                    max-width: 200px;
                     width: 100%;
                     height: 32px;
                     font-size: 1.5rem;
@@ -362,7 +368,7 @@ body{
                     font-weight: 400;
                 }
                 h1{
-                    margin-top: 32px;
+                    margin-top: 30px;
                     height: 52px;
                     font-size: 2.5rem;
                     line-height: 52px;
@@ -371,7 +377,7 @@ body{
                     color: $light-blue;
                 }
                 p{
-                    margin-top: 5px;
+                    margin-top: 9px;
                     width: 81px;
                     height: 24px;
                     font-weight: 400;
@@ -380,7 +386,7 @@ body{
                     color: $blue;
                 }
                 p:nth-of-type(2){
-                   margin-top: 35px;
+                   margin-top: 36px;
                    text-align: center;
                    max-width: 287px;
                    width: 100%;
@@ -390,7 +396,7 @@ body{
                    font-weight: 400;
                 }
                 button{
-                    margin-top: 56px;
+                    margin-top: 50px;
                     border-radius: 50px;
                     max-width: 171px;
                     width: 100%;
@@ -449,6 +455,7 @@ body{
             justify-content: center;
             color: white;
             h1{
+                margin-top: 7px;
                 font-weight: 400;
                 font-size: 2.5rem;
                 line-height: 52px;
