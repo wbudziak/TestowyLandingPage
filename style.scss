@@ -436,6 +436,7 @@ body{
         padding-top: 200px;
         padding-bottom: 200px;
         .col-12{
+        .ad-container{
             height: 380px;
             border-radius: 15px;
             background: url(/img/bgc.png);
@@ -486,5 +487,191 @@ body{
                 }
             }
         }
+        }
     }
+    .footer{
+        .bgc{
+            width: 100%;
+            height: auto;
+            background-color: $dark-blue;
+            .footer-main-content{
+                z-index: 1;
+                background-color: $dark-blue;
+                color: white;
+                .section-1{
+                    // border: red 1px solid;
+                    padding-right: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    &_content{
+                        margin-top: 89px;
+                        // height: 254px;
+                        // border: 1px solid white;
+                       .logo-container{
+                           max-width: 197px;
+                           height: 35px;
+                        img{
+                            width: 100%;
+                        }
+                       }
+                        p{
+                            margin-top: 28px;
+                            font-size: 1rem;
+                            line-height: 28px;
+                            font-weight: 400;
+                            max-width: 285px;
+                            width: 100%;
+                        }
+                        .socials{
+                            margin-top: 58px;
+                            max-width: 222px;
+                            height: 38px;
+                            display: flex;
+                            justify-content: space-between;
+                            &_container{
+                                width: 38px;
+                                height: 38px;
+                                background-color: #fff;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+                .section-2{
+                    padding-left: 0;
+                    padding-right: 0;
+                    // border: rgb(255, 208, 0) 1px solid;
+                    .lists{
+                        margin-left: 16px;
+                        margin-top: 89px;
+                        max-width: 293px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        // border: 1px solid white;
+                        &_services,&_company{
+                            height: 254px;
+                            // border: 1px solid white;
+                            text-align: left;
+                            h2{
+                                width: 100%;
+                                line-height: 24px;
+                                letter-spacing: 2px;
+                            }
+                            ol{
+                                margin-top: 39px;
+                                li{
+                                    margin-top: 20px;
+                                    font-size: 0.938rem;
+                                    line-height: 17.58px;
+                                    font-weight: 400;
+                                    height: 18px;
+                                }                
+                            }
+                        }
+                        &_services{ 
+                            max-width: 146px;
+                            width: 100%;
+                            h2{
+                                max-width: 91px;
+                                font-size: 1.063rem;
+                            }
+                            ol{
+                                li:nth-last-child(1){
+                                    line-height: 18.75px;
+                                    font-size: 1rem;
+                                    height: 19px;
+                                }    
+                            }
+                        }
+                        &_company{
+                            max-width: 98px;
+                            width: 100%;
+                            h2{
+                                max-width: 98px;
+                                font-size: 1.125rem;
+                            }
+                            ol{
+                                li:nth-of-type(2){
+                                    font-size: 0.875rem;
+                                }    
+                            }
+                        }
+                    } 
+                }
+                .section-3{
+                    padding-left: 0;
+                    // border: red 1px solid;
+                    .contact{
+                        margin-top: 89px;
+                        margin-left: 27px;
+                        max-width: 226px;
+                        width: 100%;
+                        // border: 1px solid white;
+                        h2{
+                            width: 100%;
+                            line-height: 24px;
+                            font-size: 1.125rem;
+                            letter-spacing: 2px;
+                        }
+                        p{
+                            margin-top: 41px;
+                            font-weight: 400;
+                            font-size: 0.938rem;
+                            line-height: 17.58px;
+                        }
+                        p:nth-of-type(2){
+                            margin-top: 21px;
+                            font-size: 1.563rem;
+                            line-height: 29.3px;
+                        }
+                        .logos{
+                            margin-top: 27px;
+                            max-width: 226px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            // border: 1px solid white;
+                            &_logo1{
+                                max-width: 106px;
+                                height: 41px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            &_logo2{
+                                max-width: 100px;
+                                width: 100%;
+                                height: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .stamp{
+                    padding-top: 130px;
+                    padding-bottom: 70px;
+                    p{
+                        font-size: 1rem;
+                        line-height: 28px;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                }
+             
+            }
+        }
+       
+    }
+   
 }
