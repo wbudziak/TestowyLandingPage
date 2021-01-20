@@ -98,11 +98,15 @@ body{
         position: relative;
         @media(max-width: $lg){
             padding-top: 5vh;
+            padding-bottom: 5vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-   
+        @media(max-width: $sm){
+            padding-bottom: 5vh;
+         }
+
         .banner_content{
             max-width: 477px;
             width: 100%;
@@ -112,20 +116,50 @@ body{
              }
             h1{
                 font-size: 3.5rem;
-                line-height: 68px;
+                line-height: 4.25rem;
                 font-family: 'Nunito Sans', sans-serif;
                 font-weight: 600;
                 @media(max-width: $xl){
                     font-size: 3.2rem;
+                    line-height: 3.25rem;
+                }
+                @media(max-width: $lg){
+                    font-size: 3rem;
+                }
+                @media(max-width: $md){
+                    margin: 0 auto;
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                    max-width: 75%;
+                }
+                @media(max-width: $sm){
+                    font-size: 40px;
+                    max-width: 90%;
+                    line-height: 2.5rem;
                 }
             }
             p{
                 margin-top: 20px;
                 font-size: 1.19rem;
                 font-weight: 400;
-                line-height: 36px;
+                line-height: 2.25rem;    
                 @media(max-width: $xl){
+                    font-size: 1.1rem;
+                    line-height: 2.75rem;
+                }
+                @media(max-width: $lg){
                     font-size: 1rem;
+                    line-height: 2.25rem;
+                }
+                @media(max-width: $md){
+                    margin: 0 auto;
+                    margin-top: 25px;
+                    font-size: 1.125rem;
+                    line-height: 2rem;
+                    max-width: 75%;
+                }
+                @media(max-width: $sm){
+                    font-size: 1.125rem;
                 }
             }
             .buttons-container{
@@ -136,12 +170,22 @@ body{
                 align-items: center;
                 width: 100%;
                 @media(max-width: $lg){
-                    padding-top: 5vh;
-                    height: 16vh;
+                    // padding-top: 5vh;
+                    height: 13vh;
                     flex-direction: column;
                     align-items: center;
                     margin: 0 auto;
                  }
+                 @media(max-width: $md){
+                    padding-top: 1vh;
+                    height: 11vh;
+
+                }
+                @media(max-width: $sm){
+                    padding-top: 2.1875rem;
+                    height: 9.0625rem;
+
+                }
                 &_button{
                     max-width: 178px;
                     width: 100%;
@@ -151,7 +195,7 @@ body{
                     background-color: $light-blue;
                     color: white;
                     font-size: 1rem;
-                    line-height: 18.75px;
+                    line-height: 1.171875rem;
                     border-radius: 8px;
                     @media(max-width: $lg){
                         max-width: 250px;
@@ -178,6 +222,9 @@ body{
                 position: relative;
                 max-width: 576px;
                 height: 416px;
+                @media(max-width: $sm){
+                    transform: scale(0.9);
+                 }
                 img{
                     width: 100%;
                 }
@@ -211,32 +258,61 @@ body{
         }
     }
     .service{
+        @media(max-width: $md){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
         &_text{
+            @media(max-width: $md){
+                text-align: center;
+                margin-bottom: 5vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+             }
+             @media(max-width: $sm){
+                margin-bottom: 2vh;
+             }
             h2{
                 font-size: 1rem;
-                line-height: 21px;
+                line-height: 1.3125rem;
                 color: $blue;
             }
             h1{
                 margin-top: 17px;
                 font-size: 2.5rem;
-                line-height: 52px;
+                line-height: 3.25rem;
                 font-weight: 600;
                 font-family: 'Nunito Sans', sans-serif;
                 color: $dark-blue;
+                 @media(max-width: $md){
+                    max-width: 400px;
+                    width: 100%;
+                    border: 1px solid black;
+                }
             }
             p{
                 margin-top: 6px;
                 font-size: 1.125rem;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 1.75rem;
                 color: $dark-blue;
+                line-height: 2.5rem;
+                @media(max-width: $md){
+                    max-width: 400px;
+                    width: 100%;
+                    border: 1px solid black;
+                }
             }
         }
         &_squares{
             margin-top: 61px;
             // background-color: rgb(6, 205, 255);
             display: flex;
+            @media(max-width: $md){
+                margin-top: 2vh
+             }
             .box{
                 max-width: 360px;
                 width: 100%;
@@ -247,9 +323,7 @@ body{
                 @media(max-width: $lg){
                     height: auto;
                     display: flex;
-                    flex-direction: column;
-                    // align-items: center;
-                    // justify-content: center;
+                    flex-direction: column;     
                  }
                 .icon-rectangle{
                     width: 64px;
@@ -271,11 +345,13 @@ body{
                     width: 100%;
                     height: 22px;
                     font-size: 1.5rem;
-                    line-height: 21.28px;
+                    line-height: 1.33rem;
                     letter-spacing: 0.2;
                     @media(max-width: $lg){
-                        
                         font-size: 1.3rem;
+                     }
+                     @media(max-width: $md){
+                        font-size: 1.5rem;
                      }
                 }
                 p{
@@ -284,14 +360,15 @@ body{
                     margin-top: 14px;
                     margin-left: 41px;
                     font-size: 1rem;
-                    line-height: 28px;
+                    line-height: 1.75rem;
                     font-weight: 400;
                     @media(max-width: $lg){
                         font-size: .8rem;
-                
-                        // max-width: 200px;
                         margin-right: 41px;
                         height: auto;
+                     }
+                     @media(max-width: $md){
+                        font-size: 1rem;
                      }
                 }
                  p:nth-of-type(2){
@@ -300,7 +377,7 @@ body{
                      height: 19px;
                      font-size: 1rem;
                      font-weight: 400;
-                     line-height: 18.75px;
+                     line-height: 1.171875rem;
                      margin-left: 41px;
                      margin-top: 29px;
                      font-weight: 400;
@@ -308,6 +385,9 @@ body{
                         font-size: .8rem;
                         margin-top: 2vh;
                         margin-bottom: 2vh;
+                     }
+                     @media(max-width: $md){
+                        font-size: 1rem;
                      }
                      
                  }
@@ -317,45 +397,85 @@ body{
         .square-1{
             // background-color: orange;
             justify-content: flex-start;
+            @media(max-width: $md){
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+              }
         }
         .square-2{
             justify-content: center;
         }
         .square-3{
             justify-content: flex-end;
+            @media(max-width: $md){
+                justify-content: center;
+              }
         }
     }
     .features{
+        @media(max-width: $md){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
         &_text{
             padding-top: 200px;
             @media(max-width: $lg){
               padding-top: 10vh;
              }
-            
+             @media(max-width: $md){
+                text-align: center;
+                margin-bottom: 0vh;
+                padding-top: 5vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+             }
+             @media(max-width: $sm){
+                margin-bottom: 0vh;
+             }
             h2{
                 font-size: 1rem;
-                line-height: 21px;
+                line-height: 1.3125rem;
                 color: $blue;
             }
             h1{
                 margin-top: 17px;
                 font-size: 2.5rem;
-                line-height: 52px;
+                line-height: 3.25rem;
                 font-weight: 600;
                 font-family: 'Nunito Sans', sans-serif;
                 color: $dark-blue;
+                @media(max-width: $md){
+                    max-width: 400px;
+                    width: 100%;
+                    border: 1px solid black;
+                }
+                
             }
             p{
                 margin-top: 6px;
                 font-size: 1.125rem;
                 font-weight: 400;
-                line-height: 28px;
+                line-height: 1.75rem;
                 color: $dark-blue;
+                @media(max-width: $md){
+                    max-width: 400px;
+                    width: 100%;
+                    border: 1px solid black;
+                }
             }
         }
         &_container{
             margin-top: 85px;
             display: flex;
+            @media(max-width: $md){
+                margin-top: 5vh;
+             }
+             @media(max-width: $sm){
+                margin: 2vh;
+             }
             .container_img{
                 max-width: 553px;
                 max-height: 483px;
@@ -376,8 +496,21 @@ body{
                     height: 96px;
                     width: 100%;
                     font-size: 2.25rem;
-                    line-height: 48px;
+                    line-height: 3rem;
                     letter-spacing: 0.2px;
+                    @media(max-width: $xl){
+                        max-width: 350px;
+                        margin-top: 275px;
+                        font-size: 2rem;
+                     }
+                     @media(max-width: $lg){
+                        margin-top: 350px;
+                        font-size: 2.2rem;
+                     }
+                     @media(max-width: $md){
+                        margin-top: 325px;
+                        font-size: 2.1rem;
+                     }
                 }
             }
             .container_img--modify{
@@ -401,28 +534,53 @@ body{
         }
     }
     .chose-plan{
+       
         &_text{
             padding-top: 198px;
             @media(max-width: $lg){
                 padding-top: 10vh;
               }
+              @media(max-width: $md){
+                padding-top: 5vh;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+          
             h1{
                 font-size: 2.5rem;
                 font-family: 'Nunito Sans', sans-serif;
                 font-weight: 600;
-                line-height: 52px;
+                line-height: 3.25rem;
                 letter-spacing: 0.2px;
+                @media(max-width: $md){
+                    max-width: 400px;
+                    width: 100%;
+                    border: 1px solid black;
+                }
             }
             p{
                 margin-top: 7px;
                 font-size: 1.125rem;
-                line-height: 28px;
+                line-height: 1.75rem;
                 font-weight: 400;
+                @media(max-width: $md){
+                    max-width: 400px;
+                    width: 100%;
+                    border: 1px solid black;
+                }
             }
         }
         &_box{
             margin-top: 84px;
             display: flex;
+            @media(max-width: $md){
+                margin-top: 5vh;
+              }
+              @media(max-width: $sm){
+                margin-top: 2vh;
+              }
             
             .box{
 
@@ -446,7 +604,7 @@ body{
                     width: 100%;
                     height: 32px;
                     font-size: 1.5rem;
-                    line-height: 32px;
+                    line-height: 2rem;
                     letter-spacing: 0.2px;
                     font-weight: 400;
                 }
@@ -454,7 +612,7 @@ body{
                     margin-top: 30px;
                     height: 52px;
                     font-size: 2.5rem;
-                    line-height: 52px;
+                    line-height: 3.25rem;
                     letter-spacing: 0.2px;
                     font-weight: 700;
                     color: $light-blue;
@@ -465,7 +623,7 @@ body{
                     height: 24px;
                     font-weight: 400;
                     font-size: 1rem;
-                    line-height: 24px;
+                    line-height: 1.5rem;
                     color: $blue;
                 }
                 p:nth-of-type(2){
@@ -474,7 +632,7 @@ body{
                    max-width: 287px;
                    width: 100%;
                    height: 56px;
-                   line-height: 28px;
+                   line-height: 1.75rem;
                    font-size: 1rem;
                    font-weight: 400;
                 }
@@ -485,7 +643,7 @@ body{
                     width: 100%;
                     height: 48px;
                     font-size: 1rem;
-                    line-height: 44px;
+                    line-height: 2.75rem;
                     font-weight: 400;
                     border: none;
                     outline: none;
@@ -496,9 +654,13 @@ body{
         }
         &_box-1{
             justify-content: flex-start;
+            @media(max-width: $md){
+                justify-content: center;
+              }
         }
         &_box-2{
             justify-content: center;
+            
             .box-2{
                 border-top: 3px solid $green;
                 h1{
@@ -508,6 +670,9 @@ body{
         }
         &_box-3{
             justify-content: flex-end;
+            @media(max-width: $md){
+                justify-content: center;
+              }
             .box-3{
                 border-top: 3px solid $red;
                 h1{
@@ -525,8 +690,12 @@ body{
         padding-top: 200px;
         padding-bottom: 200px;
         @media(max-width: $lg){
-            margin-top: 10vh;
-            padding: 0;
+            padding-top: 10vh;
+             padding-bottom: 10vh;
+          }
+          @media(max-width: $md){
+            padding-top: 5vh;
+            padding-bottom: 5vh;
           }
         .col-12{
         .ad-container{
@@ -550,7 +719,7 @@ body{
                 margin-top: 7px;
                 font-weight: 400;
                 font-size: 2.5rem;
-                line-height: 52px;
+                line-height: 3.25rem;
                 letter-spacing: 0.2px;
                 @media(max-width: $lg){
                     font-size: 2rem;
@@ -559,7 +728,7 @@ body{
             p{
                 margin-top: 19px;
                 font-size: 1.125rem;
-                line-height: 32px;
+                line-height: 2rem;
                 font-weight: 400;
                 opacity: 0.6;
                 @media(max-width: $lg){
@@ -582,7 +751,7 @@ body{
                     background-color: white;
                     color: $dark-blue;
                     font-size: 1rem;
-                    line-height: 18.75px;
+                    line-height: 1.171875rem;
                     font-weight: 400;
                 }
                 &_button--modify{
@@ -600,43 +769,46 @@ body{
             height: auto;
             background-color: $dark-blue;
             @media(max-width: $lg){
-                margin-top: 10vh;
                 border-radius: 1rem;
-                background-color: white;
+                background-color: #4d60fb;
                 -webkit-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                 -moz-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                 box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
               }
+            
             .footer-main-content{
                 z-index: 1;
                 background-color: $dark-blue;
                 color: white;
                 @media(max-width: $lg){
-                    background-color: transparent;
+                    background-color: white;
                     color: black;
                   }
+                @media(max-width: $sm){
+                    border-radius: 1rem;
+                    background-color: #ffffff;
+                  }
                 .section-1{
-                    // border: red 1px solid;
                     padding-right: 0;
                     display: flex;
                     justify-content: flex-start;
                     @media(max-width: $lg){
-                        margin-top: 10vh;
+                        margin-top: 2vh;
+                        padding: 0;
                         justify-content: center;
-                        // border: 1px solid red;
                       }
                     &_content{
                         margin-top: 89px;
                         @media(max-width: $lg){
                             margin-top: 0;
-                            // border: 1px solid red;
+                            background-color: rgb(255, 255, 255);
                             max-width: 400px;
                             width: 100%;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             border-radius: 1rem;
-                            -webkit-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
+                            -webkit-box-shadow: 0px 10px 35px 0px rgba(5, 5, 5, 0.1);
                             -moz-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                             box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                           }
@@ -652,7 +824,7 @@ body{
                         p{
                             margin-top: 28px;
                             font-size: 1rem;
-                            line-height: 28px;
+                            line-height: 1.75rem;
                             font-weight: 400;
                             max-width: 285px;
                             width: 100%;
@@ -674,12 +846,17 @@ body{
                                 width: 100%;
                                 margin: 0 auto;
                                 margin-top: 2vh;
+                                min-height: 50px;
                               }
                             &_container{
                                 width: 38px;
                                 height: 38px;
                                 background-color: #fff;
                                 border-radius: 5px;
+                                @media(max-width: $lg){
+                                    border: 1px solid $dark-blue;
+                                  }
+
                             }
                         }
                     }
@@ -688,10 +865,11 @@ body{
                     padding-left: 0;
                     padding-right: 0;
                     @media(max-width: $lg){
+                        background-color: #fff;
                         margin: 0 auto;
                         max-width: 400px;
                         width: 100%;
-                        margin-top: 5vh;
+                        margin-top: 2vh;
                         display: flex;
                         justify-content: center;
                         border-radius: 1rem;
@@ -709,63 +887,61 @@ body{
                         justify-content: space-between;
                         @media(max-width: $lg){
                             margin: 0;
-                            justify-content: space-evenly;
+                            min-height: 275px;
+                            align-items: flex-start;
+                            justify-content: space-around;
                             max-width: 400px;
-                            border: 1px solid red;
                           }
-                        // border: 1px solid white;
                         &_services,&_company{
                             height: 254px;
-                            // border: 1px solid white;
-                            @media(max-width: $lg){
-                                border: 1px solid red;
-                                
+                            @media(max-width: $lg){     
                                 height: auto;
+                                max-width: 200px;
+                                width: 100%;
                               }
                             text-align: left;
                             h2{
                                 width: 100%;
-                                line-height: 24px;
+                                line-height: 1.5rem;
                                 letter-spacing: 2px;
                                    @media(max-width: $lg){
+                                       margin: 0 auto;
                                      margin-top: 2vh;
-                                     
                                   }
                             }
                             ol{
                                 margin-top: 39px;
+                                text-decoration: underline;
                                 @media(max-width: $lg){
-                                    margin-top: 1vh;
-                                    
-                                    
+                                    text-align: center;
+                                    margin-top: 0vh;     
                                  }
                                 li{
                                     margin-top: 20px;
                                     font-size: 0.938rem;
-                                    line-height: 17.58px;
+                                    line-height: 1.09875rem;
                                     font-weight: 400;
                                     height: 18px;
                                     @media(max-width: $lg){
-                                        font-size: 1.2rem;
-                                        
-                                        
-                                     }
-                                    
+                                        margin-top: 2vh;
+                                        font-size: 1rem;    
+                                     } 
                                 }                
                             }
                         }
                         &_services{ 
                             max-width: 146px;
                             width: 100%;
-                            
+                            @media(max-width: $lg){
+                                max-width: 160px;
+                            }
                             h2{
                                 max-width: 91px;
                                 font-size: 1.063rem;
-                              
                             }
                             ol{
                                 li:nth-last-child(1){
-                                    line-height: 18.75px;
+                                    line-height: 1.171875rem;
                                     font-size: 1rem;
                                     height: 19px;
                                 }    
@@ -775,15 +951,15 @@ body{
                             max-width: 98px;
                             width: 100%;
                             @media(max-width: $lg){
-                                max-width: 200px;
-                                
+                                max-width: 160px;
+                            }
                             h2{
                                 max-width: 98px;
                                 font-size: 1.125rem;
                             }
                             ol{
                                 li:nth-of-type(2){
-                                    font-size: 0.875rem;
+                                font-size: 0.875rem;
                                 }    
                             }
                         }
@@ -791,13 +967,19 @@ body{
                 }
                 .section-3{
                     padding-left: 0;
-                    // border: red 1px solid;
                     @media(max-width: $lg){
-                        margin-top: 5vh;
+                        margin: 0 auto;
+                        max-width: 400px;
+                        width: 100%;
+                        margin-top: 2vh;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-
+                        border-radius: 1rem;
+                        background-color: white;
+                        -webkit-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
+                        -moz-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
+                        box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
                       }
                     .contact{
                         margin-top: 89px;
@@ -810,10 +992,7 @@ body{
                            display: flex;
                            flex-direction: column;
                            align-items: center;
-    
-                          }
-                       
-                        // border: 1px solid white;
+                          }        
                         h2{
                             width: 100%;
                             line-height: 24px;
@@ -881,13 +1060,15 @@ body{
                     padding-bottom: 70px;
                     @media(max-width: $lg){
                        padding: 0;
-                        padding-top: 6vh;
-                        padding-bottom: 5vh;
-
+                        padding-top: 2vh;
+                        padding-bottom: 2vh;
+                      }
+                      @media(max-width: $sm){
+                       color: white;
                       }
                     p{
                         font-size: 1rem;
-                        line-height: 28px;
+                        line-height: 1.75rem;
                         font-weight: 400;
                         text-align: center;
                     }
