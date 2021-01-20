@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Landing Page</title>
 </head>
 <body>
-    
+    <!-- header -->
  <div class="container">
      <div class="row">
          <div class="col-12 header">
@@ -41,6 +41,7 @@
          </div>
      </div>
  </div>
+    <!-- mobile nav -->
  <div class="mobile-nav">
         <ol>
             <li>Home</li>
@@ -49,6 +50,7 @@
             <li>Blog</li>
         </ol>
  </div>
+    <!--banner -->
  <div class="container">
      <div class="row banner">
          <div class="col-12 col-md-12  col-lg-6">
@@ -74,6 +76,7 @@
          </div>
      </div>
  </div>
+    <!-- service -->
 <div class="container">
     <div class="row service">
         <div class="col-12 service_text">
@@ -100,7 +103,6 @@
                 <h3>Ecommerce</h3>
                 <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
                 <p>Learn more</p>
-
             </div>
         </div>
         <div class="col-12 col-md-4 service_squares square-3">
@@ -113,10 +115,9 @@
                 <p>Learn more</p>
             </div>
         </div>
-
-        
     </div>
 </div>
+    <!-- features -->
 <div class="container">
     <div class="row features">
         <div class="col-12 features_text">
@@ -139,6 +140,7 @@
         </div>
     </div>
 </div>
+    <!-- chose plan -->
 <div class="container">
     <div class="row chose-plan">
         <div class="col-12 chose-plan_text">
@@ -174,6 +176,7 @@
         </div>
     </div>
 </div>
+    <!-- add -->
 <div class="container">
     <div class="row ad">
     <div class="col-12">
@@ -188,6 +191,7 @@
     </div>
 </div>
 </div>
+    <!-- footer -->
 <div class="footer">
     <div class="bgc">
         <div class="container">
@@ -259,19 +263,10 @@
                 <div class="col-12 stamp">
                     <p>Copyright &copy; 2021. Crafted with love.</p>
                 </div>
-              
             </div>
         </div>
-    </div>
-                
+    </div>      
 </div>
-<script>
-    const burger = document.querySelector('.burger');
-    const list = document.querySelector('.mobile-nav');
-    const burgerOn = ()=>{
-        list.classList.toggle('slideOn');
-    }
-    burger.addEventListener('click', burgerOn)
-</script>
+<script src="main.js"></script>
 </body>
 </html>
