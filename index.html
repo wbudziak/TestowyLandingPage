@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="_starter_bootstrap5_reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    
  <div class="container">
      <div class="row">
          <div class="col-12 header">
@@ -30,9 +32,22 @@
                     <button class="buttons-container_button  buttons-container_button--modifier">Login</button>
                  </div>
              </div>
+             <div class="mobile-menu">
+                 <div class="burger">
+                    <i class="fas fa-bars"></i>
+                 </div>
+             </div>
              <span></span>
          </div>
      </div>
+ </div>
+ <div class="mobile-nav">
+        <ol>
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li>Pages</li>
+            <li>Blog</li>
+        </ol>
  </div>
  <div class="container">
      <div class="row banner">
@@ -64,7 +79,7 @@
         <div class="col-12 service_text">
             <h2>OUR SERVICES</h2>
             <h1>We build experience</h1>
-            <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
+            <p>Lorem ipsum dolor sit amet, coectetur<br> adipiscing elit. Suspendisse varius enim in eros .</p>
         </div>
         <div class="w-100"></div>
         <div class="col-12 col-md-4 service_squares square-1">
@@ -73,7 +88,7 @@
                     <img src="img/icon-1.png" alt="">
                 </div>
                 <h3>Design</h3>
-                <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
+                <p>Lorem ipsum dolor sit amet, coectetur</br> adipiscing elit. Suspendisse varius enim in eros .</p>
                 <p>Learn more</p>
             </div>
         </div>
@@ -94,7 +109,7 @@
                     <img src="img/icon-3.png" alt="">
                 </div>
                 <h3>Application</h3>
-                <p>Lorem ipsum dolor sit amet, coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
+                <p>Lorem ipsum dolor sit amet,</br>coectetur adipiscing elit. Suspendisse varius enim in eros .</p>
                 <p>Learn more</p>
             </div>
         </div>
@@ -113,17 +128,15 @@
         <div class="col-12 col-md-12 col-lg-6 features_container container-1 ">
             <div class="container_img">
                 <img src="img/feature-pic-1.png" alt="">
-                <!-- <span>120 million curious readers and growing.</span> -->
+                <span>120 million curious readers and growing.</span>
             </div>
         </div>
         <div class="col-12 col-md-12 col-lg-6 features_container container-2">
             <div class="container_img container_img--modify">
                 <img src="img/feature-pic-2.png" alt="">
-                <!-- <span>Expand your reading.<br>Expand your mind.</span> -->
-
+                <span>Expand your reading.<br>Expand your mind.</span>
             </div>
         </div>
-
     </div>
 </div>
 <div class="container">
@@ -187,11 +200,20 @@
                         <p>We're brand strategy and digital design agency, building brands that matter in culture.</p>
                         <div class="socials">
                             <div class="socials_container">
+                                <img src="img/socialig.png" alt="">
                             </div>
-                            <div class="socials_container"></div>
-                            <div class="socials_container"></div>
-                            <div class="socials_container"></div>
-                            <div class="socials_container"></div>
+                            <div class="socials_container">
+                                <img src="img/socialfb.png" alt="">
+                            </div>
+                            <div class="socials_container">
+                                <img src="img/socialgh.png" alt="">
+                            </div>
+                            <div class="socials_container">
+                                <img src="img/socialidontknow.png" alt="">
+                            </div>
+                            <div class="socials_container">
+                                <img src="img/socialtw.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -200,7 +222,7 @@
                         <div class="lists_services">
                             <h2>SERVICES</h2>
                             <ol>
-                                <li>Blog</li>
+                                <li><a href="#">Blog</a></li>
                                 <li>Partner with freehand</li>
                                 <li>Apps & Plugins</li>
                                 <li>FAQ</li>
@@ -243,11 +265,13 @@
     </div>
                 
 </div>
-
-
- 
-
-
-
+<script>
+    const burger = document.querySelector('.burger');
+    const list = document.querySelector('.mobile-nav');
+    const burgerOn = ()=>{
+        list.classList.toggle('slideOn');
+    }
+    burger.addEventListener('click', burgerOn)
+</script>
 </body>
 </html>

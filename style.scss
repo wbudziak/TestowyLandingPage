@@ -1,5 +1,4 @@
 @import 'variables';
-
 html{
     font-size: 16px;
 }
@@ -9,6 +8,13 @@ html{
 }
 body{
     font-family: 'Roboto', sans-serif;
+    &::-webkit-scrollbar{
+        width: 8px;              
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $light-blue; 
+        border-radius: 5px;
+      }
     .header{
         position: relative;
         margin-top: 32px;
@@ -34,13 +40,13 @@ body{
             @media(max-width: $lg){
                 display: none;
             }
-
             ol{
                max-width: 361px;
                width: 100%;
                display: flex;
                justify-content: space-between;
                li{
+                   cursor: pointer;
                    font-weight: 500;
                    font-size: 1em;
                    line-height: 1em;
@@ -63,6 +69,7 @@ body{
                 align-items: center;
                 justify-content: space-between;
                 .buttons-container_button{
+                    cursor: pointer;
                     max-width: 119px;
                     width: 100%;
                     height: 48px;
@@ -91,9 +98,60 @@ body{
             width: 100%;
             background-color: #EFEEF3;
         }
+        .mobile-menu{
+            display: none;
+            .burger{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                color: $dark-blue
+            }
+             @media(max-width: $lg){
+                display: block;
+             }
+        }
+    }
+    .mobile-nav{
+        height: 0;
+        width: 100%;
+        transform: translateY(-600px);
+       ol{
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: space-between;
+           li{
+               height: 25%;
+               width: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-bottom: 1px solid #EFEEF3;
+               cursor: pointer;
+               font-weight: 500;
+               font-size: 1em;
+               line-height: 1em;
+               color: $dark-blue;
+           }
+       }
+       transition: .3s linear all;
+    }
+    .mobile-nav.slideOn{
+       @media(max-width: $lg){
+        display: block;
+        transform: translateY(0px);
+        height: 50vh;
+        ol{
+            height: 50vh;
+        }
+       }
     }
     .banner{
-        padding-top: 54px;
+        margin-top: 54px;
         padding-bottom: 120px;
         position: relative;
         @media(max-width: $lg){
@@ -106,7 +164,6 @@ body{
         @media(max-width: $sm){
             padding-bottom: 5vh;
          }
-
         .banner_content{
             max-width: 477px;
             width: 100%;
@@ -187,6 +244,7 @@ body{
 
                 }
                 &_button{
+                    cursor: pointer;
                     max-width: 178px;
                     width: 100%;
                     height: 48px;
@@ -229,6 +287,7 @@ body{
                     width: 100%;
                 }
                 .arrow {
+                    cursor: pointer;
                     display: block;
                     position: absolute;
                     height: 55px;
@@ -289,7 +348,6 @@ body{
                  @media(max-width: $md){
                     max-width: 400px;
                     width: 100%;
-                    border: 1px solid black;
                 }
             }
             p{
@@ -302,13 +360,11 @@ body{
                 @media(max-width: $md){
                     max-width: 400px;
                     width: 100%;
-                    border: 1px solid black;
                 }
             }
         }
         &_squares{
             margin-top: 61px;
-            // background-color: rgb(6, 205, 255);
             display: flex;
             @media(max-width: $md){
                 margin-top: 2vh
@@ -323,7 +379,8 @@ body{
                 @media(max-width: $lg){
                     height: auto;
                     display: flex;
-                    flex-direction: column;     
+                    flex-direction: column;   
+                    border-radius: 1rem; 
                  }
                 .icon-rectangle{
                     width: 64px;
@@ -389,18 +446,13 @@ body{
                      @media(max-width: $md){
                         font-size: 1rem;
                      }
-                     
                  }
-                
             }
         }
         .square-1{
-            // background-color: orange;
             justify-content: flex-start;
             @media(max-width: $md){
                 justify-content: center;
-                padding: 0;
-                margin: 0;
               }
         }
         .square-2{
@@ -450,9 +502,7 @@ body{
                 @media(max-width: $md){
                     max-width: 400px;
                     width: 100%;
-                    border: 1px solid black;
                 }
-                
             }
             p{
                 margin-top: 6px;
@@ -463,7 +513,6 @@ body{
                 @media(max-width: $md){
                     max-width: 400px;
                     width: 100%;
-                    border: 1px solid black;
                 }
             }
         }
@@ -478,8 +527,9 @@ body{
              }
             .container_img{
                 max-width: 553px;
-                max-height: 483px;
                 width: 100%;
+                height: 483px;
+                box-sizing: border-box;
                 position: relative;
                 display: flex;
                 img{
@@ -500,16 +550,17 @@ body{
                     letter-spacing: 0.2px;
                     @media(max-width: $xl){
                         max-width: 350px;
-                        margin-top: 275px;
                         font-size: 2rem;
                      }
                      @media(max-width: $lg){
-                        margin-top: 350px;
                         font-size: 2.2rem;
                      }
                      @media(max-width: $md){
-                        margin-top: 325px;
                         font-size: 2.1rem;
+                     }
+                     @media(max-width: $sm){
+                        font-size: 1.9rem;
+                        margin-left: 0;
                      }
                 }
             }
@@ -557,7 +608,6 @@ body{
                 @media(max-width: $md){
                     max-width: 400px;
                     width: 100%;
-                    border: 1px solid black;
                 }
             }
             p{
@@ -568,7 +618,6 @@ body{
                 @media(max-width: $md){
                     max-width: 400px;
                     width: 100%;
-                    border: 1px solid black;
                 }
             }
         }
@@ -637,6 +686,7 @@ body{
                    font-weight: 400;
                 }
                 button{
+                    cursor: pointer;
                     margin-top: 50px;
                     border-radius: 50px;
                     max-width: 171px;
@@ -660,7 +710,6 @@ body{
         }
         &_box-2{
             justify-content: center;
-            
             .box-2{
                 border-top: 3px solid $green;
                 h1{
@@ -679,6 +728,7 @@ body{
                     color: $red;
                 }
                 button{
+                    cursor: pointer;
                     border: none;
                     background-color: $dark-blue;
                     color: white;
@@ -697,6 +747,7 @@ body{
             padding-top: 5vh;
             padding-bottom: 5vh;
           }
+         
         .col-12{
         .ad-container{
             height: 380px;
@@ -712,8 +763,10 @@ body{
             color: white;
             @media(max-width: $lg){
                 height: 50vh;
-             
                 border-radius: 1rem;
+              }
+              @media(max-width: $sm){
+                height: 75vh;
               }
             h1{
                 margin-top: 7px;
@@ -724,6 +777,9 @@ body{
                 @media(max-width: $lg){
                     font-size: 2rem;
                   }
+                @media(max-width: $sm){
+                    text-align: center;
+                 }
             }
             p{
                 margin-top: 19px;
@@ -734,6 +790,9 @@ body{
                 @media(max-width: $lg){
                     font-size: 1rem;
                   }
+                @media(max-width: $sm){
+                    text-align: center;
+                }
             }
             .buttons-container{
                 margin-top: 48px;
@@ -742,10 +801,16 @@ body{
                 height: 48px;
                 display: flex;
                 justify-content: space-between;
+                @media(max-width: $sm){
+                    flex-direction: column;
+                    align-items: center;
+                    height: 7.1875rem;
+                }
                 &_button{
+                    cursor: pointer;
                     max-width: 185px;
                     width: 100%;
-                    height: 100%;
+                    height: 48px;
                     border-radius: 50px;
                     border: none;
                     background-color: white;
@@ -849,14 +914,17 @@ body{
                                 min-height: 50px;
                               }
                             &_container{
+                                cursor: pointer;
                                 width: 38px;
                                 height: 38px;
                                 background-color: #fff;
                                 border-radius: 5px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
                                 @media(max-width: $lg){
                                     border: 1px solid $dark-blue;
                                   }
-
                             }
                         }
                     }
@@ -911,12 +979,13 @@ body{
                             }
                             ol{
                                 margin-top: 39px;
-                                text-decoration: underline;
                                 @media(max-width: $lg){
                                     text-align: center;
                                     margin-top: 0vh;     
+                                    text-decoration: underline;
                                  }
                                 li{
+                                    cursor: pointer;
                                     margin-top: 20px;
                                     font-size: 0.938rem;
                                     line-height: 1.09875rem;
@@ -1062,9 +1131,6 @@ body{
                        padding: 0;
                         padding-top: 2vh;
                         padding-bottom: 2vh;
-                      }
-                      @media(max-width: $sm){
-                       color: white;
                       }
                     p{
                         font-size: 1rem;
